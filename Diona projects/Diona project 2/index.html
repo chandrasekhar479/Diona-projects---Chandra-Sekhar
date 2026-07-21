@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Worker Progress Report</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="report-header">
+            <div class="header-left">
+                <div class="org-name">Workers Compensation Board of Manitoba</div>
+                <div class="address">333 Broadway Winnipeg, MB R3C 4W3</div>
+                <div class="phone">Phone: (204) 954-4321 | Toll Free: 1-855-954-4321</div>
+            </div>
+            <div class="header-right">
+                <div class="claim-info">
+                    <span class="label">Claim No.</span>
+                    <span class="value">20042047</span>
+                </div>
+                <div class="wp-badge">WP</div>
+            </div>
+        </header>
+
+        <h1 class="report-title">Worker Progress Report</h1>
+        <p class="intro-text">Madeleine Willson provided the following updates in relation to their claim:</p>
+
+        <!-- Section 1: Return to Work -->
+        <section class="form-section">
+            <h2>Return to Work</h2>
+            
+            <div class="form-group">
+                <p class="question">Select one:</p>
+                <div class="radio-group">
+                    <label class="radio-label">
+                        <input type="radio" name="return_status" value="not_returned" checked>
+                        I have not returned to work
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="return_status" value="returned">
+                        I returned to work on: <input type="date" class="inline-input" value="2024-03-15">
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <p class="question">I have not missed time from work</p>
+                <div class="checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" checked>
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <p class="question">I am working:</p>
+                <div class="radio-group vertical">
+                    <label class="radio-label">
+                        <input type="radio" name="work_status" value="full_regular" checked>
+                        Full duties, regular hours
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="work_status" value="full_reduced">
+                        Full duties, reduced hours
+                        <input type="text" class="inline-input hours-input" placeholder="hours">
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="work_status" value="modified_regular">
+                        Modified duties, regular hours
+                        <input type="text" class="inline-input hours-input" placeholder="regular hours">
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="work_status" value="modified_reduced">
+                        Modified duties, reduced hours
+                        <input type="text" class="inline-input hours-input" placeholder="reduced hours">
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <p class="question">My return to work is going:</p>
+                <input type="text" class="full-input" value="Terrible. Testing Testing">
+            </div>
+
+            <div class="form-group">
+                <p class="question">I expect to return to work on:</p>
+                <div class="inline-field">
+                    <span class="label-text">Date</span>
+                    <input type="date" class="date-input">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <p class="question">I have the following concerns about returning to work:</p>
+                <textarea class="full-input" rows="3"></textarea>
+            </div>
+
+            <div class="form-group contact-row">
+                <div class="contact-field">
+                    <span class="label-text">on (Name of employer contact)</span>
+                    <input type="text" class="full-input">
+                </div>
+                <div class="contact-field">
+                    <span class="label-text">Date I was most recently in contact with:</span>
+                    <input type="date" class="date-input">
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Recovery -->
+        <section class="form-section">
+            <h2>Recovery</h2>
+            
+            <div class="form-group">
+                <p class="question">Select one:</p>
+                <div class="radio-group">
+                    <label class="radio-label">
+                        <input type="radio" name="recovery_status" value="not_recovered" checked>
+                        I have not fully recovered from my workplace injury
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="recovery_status" value="recovered">
+                        I have fully recovered from my workplace injury
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <p class="question">I have provided the following comments about my recovery:</p>
+                <textarea class="full-input" rows="3"></textarea>
+            </div>
+
+            <div class="form-group pain-scale">
+                <p class="question">I rate my current pain/discomfort on a scale of 1-10, where 1 is no pain and 10 is severe pain</p>
+                <div class="scale-container">
+                    <div class="scale-labels">
+                        <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
+                        <span>6</span><span>7</span><span>8</span><span>9</span><span>10</span>
+                    </div>
+                    <div class="scale-options">
+                        <label><input type="radio" name="pain_scale" value="1"></label>
+                        <label><input type="radio" name="pain_scale" value="2"></label>
+                        <label><input type="radio" name="pain_scale" value="3"></label>
+                        <label><input type="radio" name="pain_scale" value="4"></label>
+                        <label><input type="radio" name="pain_scale" value="5"></label>
+                        <label><input type="radio" name="pain_scale" value="6"></label>
+                        <label><input type="radio" name="pain_scale" value="7"></label>
+                        <label><input type="radio" name="pain_scale" value="8"></label>
+                        <label><input type="radio" name="pain_scale" value="9"></label>
+                        <label><input type="radio" name="pain_scale" value="10"></label>
+                    </div>
+                    <div class="scale-descriptions">
+                        <span>out of 10</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <p class="question">Select one:</p>
+                <div class="radio-group">
+                    <label class="radio-label">
+                        <input type="radio" name="medical_treatment" value="not_receiving" checked>
+                        I am not continuing to receive medical treatment for my workplace injury.
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="medical_treatment" value="receiving">
+                        I am continuing to receive medical treatment for my workplace injury from:
+                    </label>
+                </div>
+                <div class="sub-fields">
+                    <div class="field-row">
+                        <span class="label-text">(Medical Provider Type)</span>
+                        <input type="text" class="full-input">
+                    </div>
+                    <div class="field-row">
+                        <span>from</span>
+                        <input type="text" class="inline-input" placeholder="Medical Provider Name">
+                        <span>Date</span>
+                        <input type="date" class="date-input">
+                    </div>
+                    <div class="field-row">
+                        <span>My last medical treatment was</span>
+                        <input type="date" class="date-input">
+                    </div>
+                    <div class="field-row">
+                        <span>from</span>
+                        <input type="text" class="inline-input" placeholder="Medical Provider Name">
+                        <span>Date</span>
+                        <input type="date" class="date-input">
+                    </div>
+                    <div class="field-row">
+                        <span>My next medical treatment is</span>
+                        <input type="date" class="date-input">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <p class="question">I am attending a Chiropractor or Physiotherapist</p>
+                <div class="field-row">
+                    <span class="label-text">(Frequency)</span>
+                    <input type="text" class="full-input">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <p class="question">Select one:</p>
+                <div class="radio-group">
+                    <label class="radio-label">
+                        <input type="radio" name="medication" value="not_taking" checked>
+                        I am not taking medication for my workplace injury.
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="medication" value="taking">
+                        I am taking medication for my workplace injury:
+                    </label>
+                </div>
+                <div class="sub-fields">
+                    <div class="field-row">
+                        <span class="label-text">Select one:</span>
+                        <input type="text" class="full-input" placeholder="Name of prescribed medication">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <p class="question">I am not doing home exercises for my workplace injury</p>
+                <div class="checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox">
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <p class="question">I am doing home exercises for my workplace injury</p>
+                <div class="checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" checked>
+                    </label>
+                </div>
+                <p class="sub-question">List the exercises you are doing:</p>
+                <textarea class="full-input" rows="3"></textarea>
+            </div>
+        </section>
+
+        <!-- Section 3: Other Information -->
+        <section class="form-section">
+            <h2>Other Information</h2>
+            <div class="form-group">
+                <p class="question">I would like to provide the following additional information about my claim/injury:</p>
+                <textarea class="full-input" rows="3">No info Testing Testing</textarea>
+            </div>
+        </section>
+
+        <!-- Certification -->
+        <section class="form-section certification">
+            <p>I certify that the information given on this form is true, correct and complete to the best of my knowledge. I agree to notify the Workers Compensation Board of Manitoba (WCB) immediately once I return to any form of work and/or employment. I understand that it is an offence to knowingly make a false statement to the WCB. I also understand that it is an offence to withhold information from WCB which affects my entitlement to compensation (e.g., full or partial recovery from injury, ability to return to work, sources of additional income, etc.). I understand that refusing to co-operate with, or follow my treatment, may result in the WCB reducing or suspending my</p>
+            <p>I understand that the Privacy Notice applies to the personal information collected in this document</p>
+        </section>
+
+        <!-- Footer -->
+        <footer class="report-footer">
+            <div class="footer-left">
+                <span>Worker App ID: 712041</span>
+            </div>
+            <div class="footer-center">
+                <span>Submitted: March 19, 2024 19:21</span>
+            </div>
+            <div class="footer-right">
+                <span>Page 1 of 3</span>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

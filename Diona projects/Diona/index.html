@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Medical & Travel Expense Request</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="header-left">
+    <div class="logo-area">
+      <div class="logo-img">
+        <img src="https://images.seeklogo.com/logo-png/52/1/workers-compensation-board-of-manitoba-logo-png_seeklogo-523978.png" alt="WCB Manitoba Logo" id="wcbLogo" onerror="this.style.display='none'; document.getElementById('logoFallback').style.display='flex';">
+        <div class="logo-fallback" id="logoFallback" style="display:none;">
+          <div class="logo-icon">WCBM</div>
+        </div>
+      </div>
+      <div class="org-name">
+        <div class="org-line1">Workers Compensation Board</div>
+        <div class="org-line2">of Manitoba</div>
+      </div>
+    </div>
+  </div>
+  <div class="header-center">
+    <div class="form-title-main">Medical & Travel Expense Request</div>
+    <div class="form-subtitle">Request</div>
+    <div class="form-claim"><strong>Claim No.</strong> <span id="claimNoDisplay">20042047</span></div>
+  </div>
+  <div class="header-right">
+    <div>333 Broadway</div>
+    <div>Winnipeg, MB R3C 4W3</div>
+    <div>Phone: (204) 954-4321</div>
+    <div>Toll Free: 1-855-954-4321</div>
+    <div><a href="https://www.wcb.mb.ca" target="_blank">wcb.mb.ca</a></div>
+  </div>
+</div>
+
+<div class="worker-info">
+  <div class="info-line"><strong>Worker Name:</strong> <span id="workerNameDisplay">Madeleine Willson</span></div>
+  <div class="info-line">Madeleine Willson requested reimbursement for the following medical and/or travel expenses:</div>
+</div>
+
+<!-- PRESCRIPTION DRUGS -->
+<div class="section-title">Prescription Drugs</div>
+<table id="prescriptionTable">
+  <thead>
+    <tr>
+      <th>Drug Name</th>
+      <th>Date Purchased</th>
+      <th>Healthcare Provider Name</th>
+      <th>Paid Amount</th>
+      <th>Prescription Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><input type="text" class="input-field" value="Naproxen" data-field="drugName"></td>
+      <td><input type="text" class="input-field" value="February 28, 2024" data-field="datePurchased"></td>
+      <td><input type="text" class="input-field" value="Dr. Best" data-field="providerName"></td>
+      <td><input type="text" class="input-field" value="$20.00" data-field="paidAmount"></td>
+      <td><input type="text" class="input-field" value="February 29, 2024" data-field="prescriptionDate"></td>
+    </tr>
+    <tr>
+      <td><input type="text" class="input-field" placeholder="Enter drug name" data-field="drugName"></td>
+      <td><input type="text" class="input-field" placeholder="MM/DD/YYYY" data-field="datePurchased"></td>
+      <td><input type="text" class="input-field" placeholder="Provider name" data-field="providerName"></td>
+      <td><input type="text" class="input-field" placeholder="$0.00" data-field="paidAmount"></td>
+      <td><input type="text" class="input-field" placeholder="MM/DD/YYYY" data-field="prescriptionDate"></td>
+    </tr>
+  </tbody>
+</table>
+<div class="no-print">
+  <button class="btn" onclick="addRow('prescriptionTable')">+ Add Prescription Drug</button>
+  <button class="btn" onclick="removeLastRow('prescriptionTable')">- Remove Last Row</button>
+</div>
+
+<!-- OVER-THE-COUNTER DRUGS -->
+<div class="section-title">Over-the-Counter Drugs</div>
+<table id="otcTable">
+  <thead>
+    <tr>
+      <th>Drug Name</th>
+      <th>Date Purchased</th>
+      <th>Paid Amount</th>
+      <th>Seller's Name</th>
+      <th>Reason for Purchasing</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><input type="text" class="input-field" value="Advil" data-field="drugName"></td>
+      <td><input type="text" class="input-field" value="March 28, 2024" data-field="datePurchased"></td>
+      <td><input type="text" class="input-field" value="$8.00" data-field="paidAmount"></td>
+      <td><input type="text" class="input-field" value="Shoppers Drug Mart" data-field="sellerName"></td>
+      <td><input type="text" class="input-field" value="Pain" data-field="reason"></td>
+    </tr>
+    <tr>
+      <td><input type="text" class="input-field" placeholder="Enter drug name" data-field="drugName"></td>
+      <td><input type="text" class="input-field" placeholder="MM/DD/YYYY" data-field="datePurchased"></td>
+      <td><input type="text" class="input-field" placeholder="$0.00" data-field="paidAmount"></td>
+      <td><input type="text" class="input-field" placeholder="Seller name" data-field="sellerName"></td>
+      <td><input type="text" class="input-field" placeholder="Reason" data-field="reason"></td>
+    </tr>
+  </tbody>
+</table>
+<div class="no-print">
+  <button class="btn" onclick="addRow('otcTable')">+ Add OTC Drug</button>
+  <button class="btn" onclick="removeLastRow('otcTable')">- Remove Last Row</button>
+</div>
+
+<!-- BANDAGES, BRACES OR OTHER MEDICAL SUPPLIES -->
+<div class="section-title">Bandages, Braces or Other Medical Supplies</div>
+<table id="suppliesTable">
+  <thead>
+    <tr>
+      <th>Item Purchased</th>
+      <th>Date Purchased</th>
+      <th>Healthcare Provider Name</th>
+      <th>Was this Prescribed?</th>
+      <th>Paid Amount</th>
+      <th>Seller's Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><input type="text" class="input-field" value="Tensor" data-field="itemName"></td>
+      <td><input type="text" class="input-field" value="February 28, 2024" data-field="datePurchased"></td>
+      <td><input type="text" class="input-field" value="Dr. Best" data-field="providerName"></td>
+      <td>
+        <div class="radio-group">
+          <label><input type="radio" name="prescribed0" value="yes" checked> Yes</label>
+          <label><input type="radio" name="prescribed0" value="no"> No</label>
+        </div>
+      </td>
+      <td><input type="text" class="input-field" value="$10.00" data-field="paidAmount"></td>
+      <td><input type="text" class="input-field" value="Shoppers Drug Mart" data-field="sellerName"></td>
+    </tr>
+    <tr>
+      <td><input type="text" class="input-field" placeholder="Item name" data-field="itemName"></td>
+      <td><input type="text" class="input-field" placeholder="MM/DD/YYYY" data-field="datePurchased"></td>
+      <td><input type="text" class="input-field" placeholder="Provider name" data-field="providerName"></td>
+      <td>
+        <div class="radio-group">
+          <label><input type="radio" name="prescribed1" value="yes"> Yes</label>
+          <label><input type="radio" name="prescribed1" value="no"> No</label>
+        </div>
+      </td>
+      <td><input type="text" class="input-field" placeholder="$0.00" data-field="paidAmount"></td>
+      <td><input type="text" class="input-field" placeholder="Seller name" data-field="sellerName"></td>
+    </tr>
+  </tbody>
+</table>
+<div class="no-print">
+  <button class="btn" onclick="addSuppliesRow()">+ Add Medical Supply</button>
+  <button class="btn" onclick="removeLastRow('suppliesTable')">- Remove Last Row</button>
+</div>
+
+<!-- PARKING FOR MEDICAL APPOINTMENTS -->
+<div class="section-title">Parking for Medical Appointments</div>
+<table id="parkingTable">
+  <thead>
+    <tr>
+      <th>Address of Healthcare Provider/Medical Facility</th>
+      <th>Date</th>
+      <th>Paid Amount</th>
+      <th>Meter Used?</th>
+      <th>Meter Number</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><input type="text" class="input-field" value="333 St Mary Ave, Winnipeg MB R3C 4A5, Canada" data-field="address"></td>
+      <td><input type="text" class="input-field" value="March 28, 2024" data-field="date"></td>
+      <td><input type="text" class="input-field" value="$10.00" data-field="paidAmount"></td>
+      <td>
+        <div class="radio-group">
+          <label><input type="radio" name="meter0" value="yes" checked> Yes</label>
+          <label><input type="radio" name="meter0" value="no"> No</label>
+        </div>
+      </td>
+      <td><input type="text" class="input-field" value="12245" data-field="meterNumber"></td>
+    </tr>
+    <tr>
+      <td><input type="text" class="input-field" placeholder="Facility address" data-field="address"></td>
+      <td><input type="text" class="input-field" placeholder="MM/DD/YYYY" data-field="date"></td>
+      <td><input type="text" class="input-field" placeholder="$0.00" data-field="paidAmount"></td>
+      <td>
+        <div class="radio-group">
+          <label><input type="radio" name="meter1" value="yes"> Yes</label>
+          <label><input type="radio" name="meter1" value="no"> No</label>
+        </div>
+      </td>
+      <td><input type="text" class="input-field" placeholder="Meter #" data-field="meterNumber"></td>
+    </tr>
+  </tbody>
+</table>
+<div class="no-print">
+  <button class="btn" onclick="addParkingRow()">+ Add Parking Entry</button>
+  <button class="btn" onclick="removeLastRow('parkingTable')">- Remove Last Row</button>
+</div>
+
+<!-- MILEAGE TO MEDICAL APPOINTMENTS -->
+<div class="section-title">Mileage to Medical Appointments</div>
+<div class="note">The WCB will generally reimburse only those transportation costs which are in excess of costs that would be incurred by the worker while travelling to and from work.</div>
+<table id="mileageTable">
+  <thead>
+    <tr>
+      <th>Appointment Date</th>
+      <th>Address of Healthcare Provider/Medical Facility</th>
+      <th>Address of Workplace</th>
+      <th>Number of km (Round Trip)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><input type="text" class="input-field" value="March 28, 2024" data-field="appointmentDate"></td>
+      <td><input type="text" class="input-field" value="HSC, 820 Sherbrook St, Winnipeg MB R3A 1R9, Canada" data-field="facilityAddress"></td>
+      <td><input type="text" class="input-field" value="WCB, 333 Broadway, Winnipeg MB R3C 4W3, Canada" data-field="workplaceAddress"></td>
+      <td><input type="text" class="input-field" value="20 km" data-field="km"></td>
+    </tr>
+    <tr>
+      <td><input type="text" class="input-field" placeholder="MM/DD/YYYY" data-field="appointmentDate"></td>
+      <td><input type="text" class="input-field" placeholder="Facility address" data-field="facilityAddress"></td>
+      <td><input type="text" class="input-field" placeholder="Workplace address" data-field="workplaceAddress"></td>
+      <td><input type="text" class="input-field" placeholder="0 km" data-field="km"></td>
+    </tr>
+  </tbody>
+</table>
+<div class="no-print">
+  <button class="btn" onclick="addRow('mileageTable')">+ Add Mileage Entry</button>
+  <button class="btn" onclick="removeLastRow('mileageTable')">- Remove Last Row</button>
+</div>
+
+<div class="page-break"></div>
+
+<!-- BUS OR TAXI FARE -->
+<div class="section-title">Bus or Taxi Fare for Medical Appointments*</div>
+<div class="note">*Note: Pre-approval is required from your WCB representative to claim taxi fares.</div>
+<table id="fareTable">
+  <thead>
+    <tr>
+      <th>Appointment Date</th>
+      <th>Address of Starting Point</th>
+      <th>Address of Healthcare Provider/Medical Facility</th>
+      <th>Bus or Taxi</th>
+      <th>Total Fare Paid</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><input type="text" class="input-field" value="March 28, 2024" data-field="appointmentDate"></td>
+      <td><input type="text" class="input-field" placeholder="Starting address" data-field="startAddress"></td>
+      <td><input type="text" class="input-field" value="HSC Winnipeg Women's Hospital, 665 William Ave, Winnipeg MB R3E 0Z2, Canada" data-field="facilityAddress"></td>
+      <td>
+        <div class="radio-group">
+          <label><input type="radio" name="fareType0" value="bus" checked> Bus</label>
+          <label><input type="radio" name="fareType0" value="taxi"> Taxi</label>
+        </div>
+      </td>
+      <td><input type="text" class="input-field" value="$3.00" data-field="farePaid"></td>
+    </tr>
+    <tr>
+      <td><input type="text" class="input-field" value="March 27, 2024" data-field="appointmentDate"></td>
+      <td><input type="text" class="input-field" value="440 Edmonton St, Winnipeg MB R3B 2M4, Canada" data-field="startAddress"></td>
+      <td><input type="text" class="input-field" value="25 Furby St, Winnipeg MB R3C 2A2, Canada" data-field="facilityAddress"></td>
+      <td>
+        <div class="radio-group">
+          <label><input type="radio" name="fareType1" value="bus"> Bus</label>
+          <label><input type="radio" name="fareType1" value="taxi" checked> Taxi</label>
+        </div>
+      </td>
+      <td><input type="text" class="input-field" value="$15.00" data-field="farePaid"></td>
+    </tr>
+    <tr>
+      <td><input type="text" class="input-field" placeholder="MM/DD/YYYY" data-field="appointmentDate"></td>
+      <td><input type="text" class="input-field" placeholder="Starting address" data-field="startAddress"></td>
+      <td><input type="text" class="input-field" placeholder="Facility address" data-field="facilityAddress"></td>
+      <td>
+        <div class="radio-group">
+          <label><input type="radio" name="fareType2" value="bus"> Bus</label>
+          <label><input type="radio" name="fareType2" value="taxi"> Taxi</label>
+        </div>
+      </td>
+      <td><input type="text" class="input-field" placeholder="$0.00" data-field="farePaid"></td>
+    </tr>
+  </tbody>
+</table>
+<div class="no-print">
+  <button class="btn" onclick="addFareRow()">+ Add Fare Entry</button>
+  <button class="btn" onclick="removeLastRow('fareTable')">- Remove Last Row</button>
+</div>
+
+<!-- PRIVACY NOTICE -->
+<div style="margin-top: 20px; font-size: 10px;">
+  <div class="checkbox-group">
+    <input type="checkbox" id="privacyAck" checked>
+    <label for="privacyAck">I understand that the Privacy Notice applies to the personal information collected in this form.</label>
+  </div>
+  <div class="error-msg" id="privacyError">You must acknowledge the privacy notice.</div>
+</div>
+
+<!-- SIGNATURE -->
+<div class="signature-area">
+  <div class="signature-line">
+    <div class="signature-box">
+      <div class="line" id="signatureLine"></div>
+      <div class="label">Worker Signature</div>
+    </div>
+    <div class="signature-box">
+      <div class="line" id="dateLine"></div>
+      <div class="label">Date</div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <div>Worker App ID: <span id="workerAppId">712041</span></div>
+  <div>Submitted: <span id="submittedDate">March 28, 2024 20:43</span></div>
+  <div>Page <span id="pageNum">1</span> of <span id="totalPages">2</span></div>
+</div>
+
+<!-- CONTROLS -->
+<div class="no-print" style="margin-top: 20px; padding: 15px; border: 2px dashed #999; background: #f9f9f9;">
+  <h3 style="font-size: 12px; margin-bottom: 10px;">Form Controls</h3>
+  <button class="btn btn-primary" onclick="validateAndSubmit()">Validate & Calculate Totals</button>
+  <button class="btn" onclick="window.print()">Print / Save as PDF</button>
+  <button class="btn" onclick="resetForm()">Reset to Default Data</button>
+  <button class="btn" onclick="clearAll()">Clear All Fields</button>
+
+  <div class="summary-box" id="summaryBox" style="display:none;">
+    <h3>Expense Summary</h3>
+    <div class="summary-item"><span>Prescription Drugs:</span><span id="sumPrescription">$0.00</span></div>
+    <div class="summary-item"><span>Over-the-Counter Drugs:</span><span id="sumOTC">$0.00</span></div>
+    <div class="summary-item"><span>Medical Supplies:</span><span id="sumSupplies">$0.00</span></div>
+    <div class="summary-item"><span>Parking:</span><span id="sumParking">$0.00</span></div>
+    <div class="summary-item"><span>Bus/Taxi Fare:</span><span id="sumFare">$0.00</span></div>
+    <div class="summary-item total-row"><span>Total Requested Reimbursement:</span><span id="sumTotal">$0.00</span></div>
+  </div>
+
+  <div id="validationResults" style="margin-top: 10px; font-size: 10px;"></div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+
+

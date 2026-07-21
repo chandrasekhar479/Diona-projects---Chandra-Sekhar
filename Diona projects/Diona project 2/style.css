@@ -1,0 +1,412 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    line-height: 1.4;
+    color: #333;
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border: 1px solid #ccc;
+}
+
+/* Header */
+.report-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #333;
+}
+
+.header-left {
+    flex: 1;
+}
+
+.org-name {
+    font-size: 14px;
+    font-weight: bold;
+    color: #1a5276;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.address {
+    font-size: 11px;
+    color: #666;
+    margin-top: 2px;
+}
+
+.phone {
+    font-size: 11px;
+    color: #666;
+    margin-top: 2px;
+}
+
+.header-right {
+    text-align: right;
+}
+
+.claim-info {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.claim-info .label {
+    color: #666;
+}
+
+.claim-info .value {
+    color: #333;
+    margin-left: 5px;
+}
+
+.wp-badge {
+    display: inline-block;
+    border: 2px solid #333;
+    padding: 5px 15px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+/* Title */
+.report-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.intro-text {
+    font-size: 12px;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+/* Sections */
+.form-section {
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.form-section:last-of-type {
+    border-bottom: none;
+}
+
+.form-section h2 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #999;
+}
+
+/* Form Groups */
+.form-group {
+    margin-bottom: 18px;
+}
+
+.question {
+    font-size: 12px;
+    font-weight: normal;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.sub-question {
+    font-size: 12px;
+    color: #333;
+    margin: 8px 0 5px 0;
+}
+
+/* Radio & Checkbox Groups */
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.radio-group.vertical {
+    gap: 8px;
+}
+
+.radio-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.radio-label input[type="radio"] {
+    margin: 0;
+    flex-shrink: 0;
+}
+
+.checkbox-group {
+    margin: 5px 0;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+/* Inputs */
+.inline-input {
+    border: none;
+    border-bottom: 1px solid #333;
+    padding: 2px 5px;
+    font-size: 12px;
+    background: transparent;
+    min-width: 80px;
+}
+
+.inline-input:focus {
+    outline: none;
+    border-bottom: 2px solid #1a5276;
+}
+
+.full-input {
+    width: 100%;
+    border: 1px solid #999;
+    padding: 6px 8px;
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+    resize: vertical;
+}
+
+.full-input:focus {
+    outline: none;
+    border-color: #1a5276;
+}
+
+.date-input {
+    border: none;
+    border-bottom: 1px solid #333;
+    padding: 2px 5px;
+    font-size: 12px;
+    background: transparent;
+    font-family: Arial, sans-serif;
+}
+
+.date-input:focus {
+    outline: none;
+    border-bottom: 2px solid #1a5276;
+}
+
+.hours-input {
+    margin-left: 10px;
+    min-width: 100px;
+}
+
+/* Field Rows */
+.field-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+    flex-wrap: wrap;
+}
+
+.field-row .label-text {
+    font-style: italic;
+    color: #666;
+}
+
+.inline-field {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.label-text {
+    font-size: 12px;
+    color: #555;
+}
+
+/* Contact Row */
+.contact-row {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.contact-field {
+    flex: 1;
+    min-width: 250px;
+}
+
+/* Sub Fields */
+.sub-fields {
+    margin-left: 25px;
+    margin-top: 8px;
+    padding-left: 15px;
+    border-left: 2px solid #ddd;
+}
+
+/* Pain Scale */
+.pain-scale {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border: 1px solid #ddd;
+}
+
+.scale-container {
+    margin-top: 10px;
+}
+
+.scale-labels {
+    display: flex;
+    justify-content: space-between;
+    max-width: 400px;
+    margin-bottom: 5px;
+}
+
+.scale-labels span {
+    width: 30px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.scale-options {
+    display: flex;
+    justify-content: space-between;
+    max-width: 400px;
+    margin-bottom: 5px;
+}
+
+.scale-options label {
+    width: 30px;
+    text-align: center;
+}
+
+.scale-options input[type="radio"] {
+    cursor: pointer;
+}
+
+.scale-descriptions {
+    font-size: 11px;
+    color: #666;
+    text-align: right;
+    max-width: 400px;
+}
+
+/* Certification */
+.certification {
+    font-size: 11px;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border: 1px solid #ddd;
+}
+
+.certification p {
+    margin-bottom: 10px;
+}
+
+.certification p:last-child {
+    margin-bottom: 0;
+}
+
+/* Footer */
+.report-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 2px solid #333;
+    font-size: 11px;
+    color: #666;
+}
+
+.footer-left {
+    text-align: left;
+}
+
+.footer-center {
+    text-align: center;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+/* Print Styles */
+@media print {
+    body {
+        background-color: #fff;
+        padding: 0;
+    }
+    
+    .container {
+        border: none;
+        max-width: 100%;
+        padding: 20px;
+    }
+    
+    .full-input, .inline-input, .date-input {
+        border: 1px solid #999;
+    }
+    
+    input[type="radio"], input[type="checkbox"] {
+        -webkit-appearance: none;
+        appearance: none;
+        border: 1px solid #333;
+        width: 12px;
+        height: 12px;
+    }
+    
+    input[type="radio"]:checked, input[type="checkbox"]:checked {
+        background-color: #333;
+    }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+    
+    .report-header {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .header-right {
+        text-align: left;
+    }
+    
+    .contact-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .scale-labels, .scale-options {
+        max-width: 100%;
+    }
+}
+
