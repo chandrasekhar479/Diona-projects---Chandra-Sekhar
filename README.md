@@ -27,4 +27,42 @@ It is a good example of a frontend form-based web application.
 # project -2 video link
 https://drive.google.com/file/d/1FAYlm33ELhrvfNNAvwBAtC4ZJ_CX0QGy/view?usp=sharing
 
+Project Structure
 
+
+WCB-Assignment/
+│
+├── Exercise1/
+│   ├── index.html
+│   ├── style.css
+│   └── script.js
+│
+├── Exercise2/
+│   ├── index.html
+│   ├── style.css
+│   └── script.js
+│
+├── images/
+│   └── logo.jpg
+│
+└── README.md
+
+How to Run
+
+1.Download or clone this repository.
+2.Open the Exercise1 folder.
+3.Open index.html in any web browser.
+4.Repeat the same for Exercise2.
+No installation is required.
+
+Assumptions
+
+1.The webpages were recreated based on the provided PDF layouts.
+2.Dynamic values are populated using JavaScript.
+3.HTML, CSS, and JavaScript were used without any external libraries or frameworks.
+
+
+Author
+
+Name: M.Chandra Sekhar
+Thank you.
